@@ -6,9 +6,10 @@ const group_btn = document.getElementById("group_btn")
 const leave_gr_btn = document.getElementById("leave_gr_btn")
 const root = document.getElementById("root")
 
-const now = new Date();
+
 
 socket.on("message", msg => {
+    const now = new Date();
     root.insertAdjacentHTML("beforeend", `
         <div style="border: 2px solid black; padding:5px; margin: 10px 0">
             <h1>text: ${msg.text}</h1>
